@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Matt Gresock</title>
+    <meta name="theme-color" content="#f5f0eb" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="about">
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">MG</span>
+          <span class="brand-text">Matt Gresock</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="experience.html">Experience</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="page-hero reveal">
+          <p class="eyebrow">About</p>
+          <h1>A place for the story behind the resume.</h1>
+          <p class="lead narrow">
+            This page will get even more personal once I add your final paragraphs, but it already
+            gives a stronger sense of how you think, what you value, and the kind of presence you
+            bring to teams.
+          </p>
+        </section>
+
+        <section class="section quick-facts reveal">
+          <article>
+            <strong>Cornell Engineering</strong>
+            <span>Chemical Engineering with an intended Computer Science minor</span>
+          </article>
+          <article>
+            <strong>Leadership</strong>
+            <span>Student organizations, scouting, athletics, music, and service</span>
+          </article>
+          <article>
+            <strong>Strengths</strong>
+            <span>Communication, ownership, organization, and consistency</span>
+          </article>
+        </section>
+
+        <section class="section about-layout">
+          <article class="story-card reveal">
+            <p class="panel-label">Overview</p>
+            <h2>Professional summary</h2>
+            <p>
+              I am a first-year Cornell engineering student with a background shaped by leadership,
+              communication, and showing up consistently when responsibility is on the line. A lot
+              of what matters to me shows up across very different settings: supporting customers at
+              work, leading peers in student organizations, coaching and competing in speech and
+              debate, and staying involved in service and team environments.
+            </p>
+            <p>
+              I am especially interested in the overlap between engineering, technology, and
+              people-facing problem solving. That includes technical coursework, interface-focused
+              work through Kappa Theta Pi, and a broader pattern of roles where clear communication,
+              steady execution, and trust matter just as much as raw technical ability.
+            </p>
+          </article>
+
+          <aside class="profile-stack reveal">
+            <figure class="headshot-card reveal">
+              <img
+                class="portrait-image portrait-image-tall"
+                src="https://raw.githubusercontent.com/mcgresock/personal.portfolio/main/matt-headshot.jpg"
+                alt="Headshot of Matt Gresock in a navy blazer and white shirt"
+              />
+            </figure>
+            <div class="sidebar-card reveal">
+              <p class="panel-label">Personal Notes</p>
+              <ul class="detail-list">
+                <li>Cornell Chemical Engineering student</li>
+                <li>Intended Computer Science minor</li>
+                <li>Speech, debate, and presentation experience</li>
+                <li>Leadership across service, athletics, music, and scouting</li>
+                <li>Interests in web development, film, music, and the outdoors</li>
+              </ul>
+            </div>
+          </aside>
+        </section>
+
+        <section class="section dual-panel">
+          <article class="story-card reveal">
+            <p class="panel-label">How I Work</p>
+            <h2>What people can expect from me</h2>
+            <ul class="detail-list spacious-list">
+              <li>I communicate clearly and stay comfortable in people-facing situations.</li>
+              <li>I take ownership early rather than waiting to be told exactly what to do.</li>
+              <li>I care about being dependable, organized, and prepared.</li>
+              <li>I like teams where curiosity, accountability, and follow-through are taken seriously.</li>
+            </ul>
+          </article>
+          <article class="story-card reveal">
+            <p class="panel-label">Outside The Classroom</p>
+            <h2>What keeps me grounded</h2>
+            <p>
+              Outside of school and leadership roles, I spend time around music, film, and the
+              outdoors. I enjoy mountain biking, hiking, canoeing, cinema, short films, and
+              stand-up comedy, and those interests give me a good balance between structure,
+              creativity, and time away from a screen.
+            </p>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© <span id="year"></span> Matt Gresock</p>
+        <a href="contact.html">Contact</a>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
