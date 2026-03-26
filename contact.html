@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Matt Gresock</title>
+    <meta name="theme-color" content="#f5f0eb" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="contact">
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">MG</span>
+          <span class="brand-text">Matt Gresock</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="experience.html">Experience</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="page-hero reveal">
+          <p class="eyebrow">Get In Touch</p>
+          <h1>A simple place to connect.</h1>
+          <p class="lead narrow">
+            Whether you want to talk about school, projects, leadership, or anything else, this page
+            keeps the basics in one place.
+          </p>
+        </section>
+
+        <section class="section contact-layout">
+          <article class="contact-card reveal">
+            <p class="panel-label">Direct</p>
+            <h2>Reach out</h2>
+            <a class="contact-link" href="mailto:mcgresock@gmail.com">mcgresock@gmail.com</a>
+            <a class="contact-link" href="tel:+15854816457">(585) 481-6457</a>
+            <p class="body-copy">Penfield, New York</p>
+          </article>
+
+          <article class="contact-card reveal">
+            <p class="panel-label">Profiles</p>
+            <h2>Professional links</h2>
+            <a class="contact-link" href="https://www.linkedin.com/in/matthew-gresock">LinkedIn Profile</a>
+            <a class="contact-link" href="https://raw.githubusercontent.com/mgresock/personal.portfolio/main/Matthew-Gresock-Resume.pdf">Download Resume PDF</a>
+            <p class="small-note">
+              When you are ready, this page can also link to GitHub, project writeups, or case
+              studies.
+            </p>
+          </article>
+
+          <article class="contact-card callout-card reveal">
+            <p class="panel-label">A Quick Note</p>
+            <h2>What I care about</h2>
+            <p class="body-copy">
+              I care about doing good work, communicating clearly, and staying involved in the
+              communities I am part of. This site is a place to share that in a way that feels true
+              to me.
+            </p>
+            <a class="button button-primary" href="experience.html">See More</a>
+          </article>
+        </section>
+
+        <section class="section bottom-cta reveal">
+          <div>
+            <p class="eyebrow">Message</p>
+            <h2>Send something directly</h2>
+            <p class="body-copy">
+              If it is easier, you can use this form instead of starting from scratch. It will open
+              a draft addressed to me with your details already included.
+            </p>
+          </div>
+          <form class="contact-sheet" data-contact-form>
+            <div class="field-grid">
+              <label class="field">
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+              <label class="field">
+                <span>Email</span>
+                <input type="email" name="email" placeholder="you@example.com" required />
+              </label>
+            </div>
+            <label class="field">
+              <span>Company / Organization</span>
+              <input type="text" name="company" placeholder="Optional" />
+            </label>
+            <label class="field">
+              <span>Message</span>
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Write your note here."
+                required
+              ></textarea>
+            </label>
+            <div class="bottom-cta-actions">
+              <button class="button button-primary" type="submit">Open Email Draft</button>
+              <a class="button button-secondary" href="mailto:mcgresock@gmail.com">Email Directly</a>
+            </div>
+          </form>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© <span id="year"></span> Matt Gresock</p>
+        <a href="mailto:mcgresock@gmail.com">mcgresock@gmail.com</a>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
