@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Matt Gresock</title>
+  <meta name="description" content="Matt Gresock's projects — Forage AI nutrition app and personal portfolio site, built from scratch." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="projects">
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">MG</div>
+        <span class="brand-name">Matt Gresock</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="contact.html" class="nav-cta">Get in touch</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <!-- ===== PAGE HERO ===== -->
+      <section class="page-hero">
+        <div class="section-label">Projects</div>
+        <h1>Things I've<br><span class="gradient-text">actually shipped.</span></h1>
+        <p>
+          Two full projects, built solo from concept to production. One is a live AI web app.
+          The other is the site you're on right now.
+        </p>
+        <div style="margin-top: 28px;">
+          <a href="https://github.com/mgresock" target="_blank" rel="noopener" class="btn btn-outline">View my GitHub ↗</a>
+        </div>
+      </section>
+
+      <!-- ===== PROJECTS LIST ===== -->
+      <div class="projects-list">
+
+        <!-- ===== FORAGE ===== -->
+        <div class="project-feature-card reveal">
+
+          <div class="project-feature-header">
+            <div class="project-feature-logo">
+              <img src="FORAGE_LOGO.png" alt="Forage Nutrition" />
+            </div>
+            <div class="project-feature-title-block">
+              <div class="project-feature-eyebrow">Full Stack · AI · Web App</div>
+              <div class="project-feature-name">Forage Nutrition</div>
+              <div class="project-feature-tagline">An AI-powered nutrition tracker with conversational logging and dietary goal-setting</div>
+            </div>
+            <div class="project-feature-actions">
+              <a href="https://foragenutrition.vercel.app" target="_blank" rel="noopener" class="btn btn-primary">View Live ↗</a>
+            </div>
+          </div>
+
+          <div class="project-feature-body">
+
+            <div class="project-feature-desc">
+              <p>
+                Forage started as a question: why does tracking what you eat feel like filing taxes?
+                Every app I tried was either buried in manual entry or gave vague AI summaries that
+                weren't actually useful. I wanted something that felt like talking to a nutritionist —
+                fast, specific, and smart about what you're actually putting in your body.
+              </p>
+              <p>
+                I built the entire thing solo. The backend is powered by Python — handling API routing,
+                LLM integration, and all server-side logic. The app sends natural-language food entries
+                to OpenAI's API, extracts macros and micronutrients, and maps them against a user's
+                daily targets. All meal data is stored in a Supabase backend using a SQL schema
+                designed to support flexible per-meal logging, running daily totals, and user-specific
+                nutritional goals.
+              </p>
+              <p>
+                The front end is built in TypeScript. I focused heavily on the user interface —
+                making the experience feel fast and uncluttered rather than clinical. The chat input
+                handles everything from a single food item to a full meal description, and the
+                dashboard surfaces your day's progress at a glance without requiring you to dig.
+                Deployed on Vercel with continuous delivery from GitHub.
+              </p>
+            </div>
+
+            <div class="project-detail-grid">
+              <div class="project-detail-row">
+                <div class="project-detail-key">Status</div>
+                <div class="project-detail-val">
+                  <span class="project-status-live">Live</span>
+                </div>
+              </div>
+              <div class="project-detail-row">
+                <div class="project-detail-key">Role</div>
+                <div class="project-detail-val">Sole developer — design, backend, frontend, deployment</div>
+              </div>
+              <div class="project-detail-row">
+                <div class="project-detail-key">Shipped</div>
+                <div class="project-detail-val">May 2026</div>
+              </div>
+              <div class="project-detail-row">
+                <div class="project-detail-key">Stack</div>
+                <div class="project-detail-val">TypeScript · Python · SQL · Supabase · OpenAI API · Vercel</div>
+              </div>
+              <div class="project-detail-row">
+                <div class="project-detail-key">Repo</div>
+                <div class="project-detail-val">
+                  <a href="https://github.com/mgresock" target="_blank" rel="noopener" style="color: var(--blue);">GitHub ↗</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ===== PERSONAL PORTFOLIO ===== -->
+        <div class="project-feature-card reveal">
+
+          <div class="project-feature-header">
+            <div class="project-feature-logo-text">MG</div>
+            <div class="project-feature-title-block">
+              <div class="project-feature-eyebrow">Design · Frontend · No Framework</div>
+              <div class="project-feature-name">Personal Portfolio</div>
+              <div class="project-feature-tagline">This site — designed and built from scratch in pure HTML, CSS, and JavaScript</div>
+            </div>
+            <div class="project-feature-actions">
+              <a href="index.html" class="btn btn-primary">View Site ↗</a>
+            </div>
+          </div>
+
+          <div class="project-feature-body">
+
+            <div class="project-feature-desc">
+              <p>
+                I had two options: use a template or build something I'd actually be proud of.
+                The portfolio is pure HTML, CSS, and vanilla JavaScript — no framework, no build step,
+                no dependencies. Every animation, every layout, every interaction is hand-written.
+                The point wasn't to prove I can do it without React. The point was to fully own
+                every line.
+              </p>
+              <p>
+                The design system is built on a set of CSS custom properties — a dark navy base,
+                a blue-to-purple gradient that runs consistently through type, borders, and interactive
+                states, and a type scale using Space Grotesk, Inter, and DM Mono. The site uses
+                a 12-column CSS Grid for the bento layout on the homepage and a custom two-column
+                grid for the education and project cards.
+              </p>
+              <p>
+                Interactions include a letter-by-letter text scramble on the hero headline, magnetic
+                button physics (cursor-aware transform offset), a looping marquee ticker, and an
+                IntersectionObserver-based scroll reveal. The nav collapses to a hamburger on mobile.
+                Six pages total, all consistent in structure and style without a single shared template engine.
+              </p>
+            </div>
+
+            <div class="project-detail-grid">
+              <div class="project-detail-row">
+                <div class="project-detail-key">Status</div>
+                <div class="project-detail-val">
+                  <span class="project-status-live">Live</span>
+                </div>
+              </div>
+              <div class="project-detail-row">
+                <div class="project-detail-key">Role</div>
+                <div class="project-detail-val">Sole designer and developer</div>
+              </div>
+              <div class="project-detail-row">
+                <div class="project-detail-key">Shipped</div>
+                <div class="project-detail-val">2025 – present</div>
+              </div>
+              <div class="project-detail-row">
+                <div class="project-detail-key">Stack</div>
+                <div class="project-detail-val">HTML5 · CSS3 · JavaScript · GitHub Pages</div>
+              </div>
+              <div class="project-detail-row">
+                <div class="project-detail-key">Repo</div>
+                <div class="project-detail-val">
+                  <a href="https://github.com/mgresock/personal.portfolio" target="_blank" rel="noopener" style="color: var(--blue);">GitHub ↗</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===== CTA ===== -->
+      <div class="cta-banner reveal">
+        <div class="cta-text">
+          <div class="label" style="margin-bottom: 12px;">Get in touch</div>
+          <h2>Want to <span class="gradient-text">work together?</span></h2>
+          <p>Always open to new projects, internships, or conversations.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary magnetic">Say hello</a>
+          <a href="Matthew-Gresock-Resume.pdf" target="_blank" class="btn btn-outline">↓ Resume</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <strong>Matt Gresock</strong> &nbsp;·&nbsp; Cornell ORIE &amp; CS '29 &nbsp;·&nbsp; mcgresock@gmail.com
+        </div>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/matthew-gresock" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="Matthew-Gresock-Resume.pdf" target="_blank">Resume</a>
+          <a href="contact.html">Contact</a>
+          <span style="color: var(--text-dim);">© <span id="year"></span></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
