@@ -34,13 +34,33 @@ if (navToggle && navLinks) {
 // ── Text scramble ────────────────────────────────────────
 const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';
 
-function scramble(el, finalText, duration = 1200) {
+function scramble(el, finalText, duration = 1400) {
+  // Lock the h1's dimensions before scramble so random char widths
+  // never cause layout reflow that shakes the photo panel
+  const h1 = el.closest('h1');
+  if (h1) {
+    const w = h1.offsetWidth;
+    const h = h1.offsetHeight;
+    h1.style.width   = w + 'px';
+    h1.style.height  = h + 'px';
+    h1.style.overflow = 'hidden';
+  }
+
   const frames = Math.round(duration / 16);
   let frame = 0;
   const len = finalText.length;
 
   function tick() {
-    if (frame >= frames) { el.textContent = finalText; return; }
+    if (frame >= frames) {
+      el.textContent = finalText;
+      // Release the locked dimensions after scramble completes
+      if (h1) {
+        h1.style.width   = '';
+        h1.style.height  = '';
+        h1.style.overflow = '';
+      }
+      return;
+    }
     const progress  = frame / frames;
     const revealed  = Math.floor(progress * len);
     let result = '';
@@ -60,7 +80,7 @@ const scrambleEl = document.querySelector('.scramble');
 if (scrambleEl) {
   const text = scrambleEl.dataset.text || scrambleEl.textContent.trim();
   scrambleEl.dataset.text = text;
-  setTimeout(() => scramble(scrambleEl, text, 1200), 300);
+  setTimeout(() => scramble(scrambleEl, text, 1400), 350);
 }
 
 // ── Magnetic buttons ─────────────────────────────────────

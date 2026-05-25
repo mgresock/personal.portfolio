@@ -34,106 +34,108 @@
   </nav>
 
   <main>
-    <div class="container">
 
-      <!-- ===== HERO ===== -->
-      <section class="hero">
-        <div class="hero-inner">
+    <!-- ===== HERO (full-viewport, outside container) ===== -->
+    <section class="hero">
+      <div class="hero-text-panel">
+        <div class="hero-text-inner">
           <div class="hero-eyebrow">Cornell ORIE &amp; CS · Class of '29</div>
-          <h1><span class="scramble gradient-text" data-text="Matt Gresock">Matt Gresock</span></h1>
+          <h1><span class="scramble" data-text="Matt Gresock">Matt Gresock</span></h1>
           <p class="hero-sub">Engineer · Builder · Leader</p>
           <p class="hero-desc">
             Cornell ORIE &amp; CS double major. Building things that work — from full-stack AI apps
-            to leadership organizations built from scratch. Based in Ithaca, NY.
+            to leadership organizations built from scratch. Rochester, NY &amp; Ithaca, NY.
           </p>
           <div class="hero-cta">
             <a href="experience.html" class="btn btn-primary magnetic">View experience →</a>
             <a href="Matthew-Gresock-Resume.pdf" target="_blank" class="btn btn-outline">↓ Resume</a>
           </div>
         </div>
-      </section>
-
-      <!-- ===== TICKER ===== -->
-      <div class="ticker-wrap">
-        <div class="ticker">
-          <span class="ticker-item">Cornell Engineering</span>
-          <span class="ticker-item">ORIE &amp; CS</span>
-          <span class="ticker-item">Full-Stack Developer</span>
-          <span class="ticker-item">Eagle Scout</span>
-          <span class="ticker-item">Speech &amp; Debate</span>
-          <span class="ticker-item">Jazz Guitar</span>
-          <span class="ticker-item">Sigma Nu</span>
-          <span class="ticker-item">Kappa Theta Pi</span>
-          <span class="ticker-item">AI · Python · SQL</span>
-          <span class="ticker-item">TypeScript</span>
-          <span class="ticker-item">Cornell Engineering</span>
-          <span class="ticker-item">ORIE &amp; CS</span>
-          <span class="ticker-item">Full-Stack Developer</span>
-          <span class="ticker-item">Eagle Scout</span>
-          <span class="ticker-item">Speech &amp; Debate</span>
-          <span class="ticker-item">Jazz Guitar</span>
-          <span class="ticker-item">Sigma Nu</span>
-          <span class="ticker-item">Kappa Theta Pi</span>
-          <span class="ticker-item">AI · Python · SQL</span>
-          <span class="ticker-item">TypeScript</span>
-        </div>
       </div>
+      <div class="hero-photo-panel">
+        <img src="matt-headshot.png" alt="Matt Gresock" />
+      </div>
+    </section>
+
+    <!-- ===== TICKER (full-viewport) ===== -->
+    <div class="ticker-wrap">
+      <div class="ticker">
+        <span class="ticker-item">Cornell Engineering</span>
+        <span class="ticker-item">ORIE &amp; CS</span>
+        <span class="ticker-item">Full-Stack Developer</span>
+        <span class="ticker-item">Eagle Scout</span>
+        <span class="ticker-item">Speech &amp; Debate</span>
+        <span class="ticker-item">Jazz Guitar</span>
+        <span class="ticker-item">Sigma Nu</span>
+        <span class="ticker-item">Kappa Theta Pi</span>
+        <span class="ticker-item">AI · Python · SQL</span>
+        <span class="ticker-item">TypeScript</span>
+        <span class="ticker-item">Cornell Engineering</span>
+        <span class="ticker-item">ORIE &amp; CS</span>
+        <span class="ticker-item">Full-Stack Developer</span>
+        <span class="ticker-item">Eagle Scout</span>
+        <span class="ticker-item">Speech &amp; Debate</span>
+        <span class="ticker-item">Jazz Guitar</span>
+        <span class="ticker-item">Sigma Nu</span>
+        <span class="ticker-item">Kappa Theta Pi</span>
+        <span class="ticker-item">AI · Python · SQL</span>
+        <span class="ticker-item">TypeScript</span>
+      </div>
+    </div>
+
+    <div class="container">
 
       <!-- ===== BENTO GRID ===== -->
       <div class="bento-grid reveal">
 
-        <div class="bento-cell bento-featured">
-          <div class="bento-forage-logo">
-            <img src="FORAGE_LOGO.png" alt="Forage" />
+        <!-- Cols 1–2, row 1: Forage -->
+        <a href="https://foragenutrition.vercel.app" target="_blank" rel="noopener" class="bento-cell bento-forage-card" style="grid-column: 1 / 3; grid-row: 1;">
+          <div class="bento-forage-header">
+            <div class="bento-forage-icon-sm">
+              <img src="FORAGE_LOGO.png" alt="Forage" />
+            </div>
+            <div class="bento-forage-header-text">
+              <div class="bento-tag" style="margin-bottom: 4px;">Live Project ↗</div>
+              <div class="bento-title" style="margin-bottom: 0;">Forage Nutrition</div>
+            </div>
           </div>
-          <div class="bento-glow"></div>
-          <div class="bento-tag">Project · Live</div>
-          <div class="bento-title">Forage Nutrition</div>
-          <div class="bento-sub">Full-stack AI nutrition app — TypeScript, Python, SQL, Supabase, deployed on Vercel.</div>
+          <div class="bento-sub">Full-stack AI nutrition app — conversational food logging, personalized dietary tracking, and goal-setting with a TypeScript front-end deployed on Vercel.</div>
+          <div class="bento-stack-row">
+            <span class="bento-stack-pill">TypeScript</span>
+            <span class="bento-stack-pill">Python</span>
+            <span class="bento-stack-pill">SQL</span>
+            <span class="bento-stack-pill">Supabase</span>
+            <span class="bento-stack-pill">OpenAI API</span>
+          </div>
+        </a>
+
+        <!-- Cols 3–4, row 1: Cornell -->
+        <div class="bento-cell bento-cornell-card" style="grid-column: 3 / 5; grid-row: 1;">
+          <div class="bento-cornell-watermark" aria-hidden="true">ORIE</div>
+          <div class="bento-tag">Cornell Engineering · Class of '29</div>
+          <div class="bento-title">ORIE &amp; CS</div>
+          <div class="bento-sub">Operations Research &amp; Information Engineering · Double Major in Computer Science</div>
         </div>
 
-        <div class="bento-cell bento-stat">
-          <div class="bento-number">ORIE</div>
-          <div class="bento-label">Operations Research &amp; Information Engineering + CS Double Major</div>
+        <!-- Cols 1–2, row 2: 6th in NY State OO -->
+        <div class="bento-cell bento-stat-card" style="grid-column: 1 / 3; grid-row: 2;">
+          <div class="bento-stat-glow"></div>
+          <div class="bento-number">6th</div>
+          <div class="bento-label">New York State · Original Oratory · NYSFL State Championships 2025</div>
         </div>
 
-        <div class="bento-cell bento-stat">
-          <div class="bento-number">'29</div>
-          <div class="bento-label">Cornell University, College of Engineering, Class of 2029</div>
+        <!-- Col 3, row 2: Eagle Scout -->
+        <div class="bento-cell bento-stat-card" style="grid-column: 3; grid-row: 2;">
+          <div class="bento-stat-glow"></div>
+          <div class="bento-number">50</div>
+          <div class="bento-label">Scouts led at the 2023 National Jamboree · Eagle Scout</div>
         </div>
 
-        <div class="bento-cell bento-stat">
+        <!-- Col 4, row 2: NCFL Nationals -->
+        <div class="bento-cell bento-stat-card" style="grid-column: 4; grid-row: 2;">
+          <div class="bento-stat-glow"></div>
           <div class="bento-number">3×</div>
-          <div class="bento-label">NCFL Nationals qualifier · 6th Place, NY State Original Oratory 2025</div>
-        </div>
-
-        <div class="bento-cell bento-stat">
-          <div class="bento-number">Solo</div>
-          <div class="bento-label">Full-stack AI app designed, built &amp; shipped to production</div>
-        </div>
-
-        <div class="bento-cell bento-wide">
-          <div class="bento-tag">Leadership</div>
-          <div class="bento-title">Sigma Nu · Kappa Theta Pi</div>
-          <div class="bento-sub">Treasurer and New Member Class President at Cornell.</div>
-        </div>
-
-        <div class="bento-cell bento-wide">
-          <div class="bento-tag">Service</div>
-          <div class="bento-title">Eagle Scout</div>
-          <div class="bento-sub">Led a 50-member contingent at the 2023 National Jamboree.</div>
-        </div>
-
-        <div class="bento-cell bento-wide">
-          <div class="bento-tag">Work</div>
-          <div class="bento-title">Wegmans</div>
-          <div class="bento-sub">Managed 12+ self-checkout stations. Cash register operator &amp; self-checkout overseer.</div>
-        </div>
-
-        <div class="bento-cell bento-wide">
-          <div class="bento-tag">Music</div>
-          <div class="bento-title">Jazz &amp; Wind Ensemble</div>
-          <div class="bento-sub">Lead guitarist. Composed &amp; premiered an original jazz piece at senior concert.</div>
+          <div class="bento-label">NCFL Nationals qualifier · Speech &amp; Debate</div>
         </div>
 
       </div>
