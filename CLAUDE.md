@@ -1,7 +1,7 @@
 # Matt Gresock — Personal Portfolio · Claude Notes
 
 ## Project Overview
-Personal portfolio site for Matt Gresock (Cornell ORIE & CS '29). Pure HTML/CSS/JS — no framework, no build step. Six pages. Dark navy theme.
+Personal portfolio site for Matt Gresock (Cornell ORIE & CS '28). Pure HTML/CSS/JS — no framework, no build step. Six pages. Dark navy theme.
 
 **Live domain:** matthewgresock.com  
 **GitHub repo:** mgresock/personal.portfolio (dot, not hyphen)  
@@ -85,9 +85,12 @@ Matthew-Gresock-Resume.pdf — Needs to be added to repo separately
 - Must contain duplicated items (×2) for seamless loop
 
 ### Bento Grid (inside container)
-- 3-column grid: `1.1fr 1fr 1fr`, rows: `220px 220px 220px`
+- 4-column grid: `1fr 1fr 1fr 1fr`, rows: `240px 240px 240px`
 - 7 cells with explicit `grid-column` / `grid-row` inline styles
-- Layout: Forage (col 1, rows 1–2 tall) | Cornell wide (cols 2–3, row 1) | Eagle Scout + 3× Speech (cols 2–3, row 2) | three equal bottom row
+- Row 1: ForageAI (cols 1–2) | Cornell ORIE (cols 3–4)
+- Row 2: MyTube (cols 1–2) | 6th NYSFL (col 3) | 50 Jamboree (col 4)
+- Row 3: 3× NCFL (cols 1–2) | Cornell Research/BeyngLab (cols 3–4)
+- MyTube + Research cards use pure-CSS marks (`.bento-mytube-icon` play triangle, `.bento-research-watermark`) — no image assets
 
 ---
 
@@ -95,26 +98,28 @@ Matthew-Gresock-Resume.pdf — Needs to be added to repo separately
 
 ### experience.html
 - Sections: Work Experience, Projects, Leadership & Organizations, Activities & Service
-- Projects: Forage Nutrition + Personal Portfolio (both listed)
+- Work: Cornell BeyngLab research + Math Lab Online + Wegmans (in that order)
+- Projects: MyTube + ForageAI + Personal Portfolio (in that order)
 - Quick stats grid was DELETED — do not re-add
 
 ### education.html
 - Two `.edu-card-v2` cards: Cornell + Webster Schroeder
-- Cornell courses: 7 real courses with course codes (CS 2110, MATH 1920, MATH 2940, ENGRD 2700, PHYS 1112/1110, CHEM 2150, ENGRI 1120)
+- Cornell courses: 6 courses, plain names without course codes (matches resume wording)
 - WSHS: "AP Coursework — 10 courses total, selected below" + 4 listed
 - Logos: 260×260px boxes, transparent background, `object-fit: cover`
 - Quick stats were DELETED from this page too
 
 ### projects.html
-- Two `.project-feature-card` cards with gradient top border
-- Forage: FORAGE_LOGO.png, Stack = TypeScript · Python · SQL · Supabase · OpenAI API · Vercel
+- Three `.project-feature-card` cards with gradient top border, in order: MyTube, ForageAI, Portfolio
+- MyTube: `.project-feature-logo-play` CSS play-triangle mark, Stack = Next.js · TypeScript · PostgreSQL (RDS), plus a separate AWS detail row
+- ForageAI: FORAGE_LOGO.png, Stack = Next.js · TypeScript · Supabase · PostgreSQL · Anthropic API · Vercel
 - Portfolio: MG gradient text mark, Stack = HTML5 · CSS3 · JavaScript · GitHub Pages
 - GitHub link at top of page hero
 
 ### about.html
 - Story: 5 paragraphs, personal voice, mentions family of engineers (mom, dad, grandfather)
 - Joined debate as freshman, 6th NY State OO senior year
-- Skills: 10 devicons + Claude Code text mark
+- Skills: 12 devicons + Claude Code text mark (index.html and about.html must stay in sync)
 - Interests: pill tags
 
 ### contact.html
@@ -123,16 +128,16 @@ Matthew-Gresock-Resume.pdf — Needs to be added to repo separately
 ---
 
 ## Matt's Background (for content decisions)
-- **School:** Cornell ORIE & CS double major, College of Engineering, Class of 2029
+- **School:** Cornell ORIE & CS double major, College of Engineering, Class of 2028 (anticipated May 2028)
 - **High school:** Webster Schroeder HS, Webster NY, 98.0 GPA, 10 AP courses, graduated June 2025
 - **From:** Penfield, NY. Family of engineers (mom, dad, grandfather)
 - **Speech & Debate:** Joined freshman year, NCFL Nationals 3×, 6th Place NY State Original Oratory 2025
 - **Scouts:** Eagle Scout, Senior Patrol Leader, JASM. Led 50-person contingent at 2023 National Jamboree
 - **Music:** Lead guitarist + Band Council President, Jazz & Wind Ensemble. Composed original jazz piece for senior concert
 - **Service:** Founded Webster Service Scholars (Habitat for Humanity), ran 4 years as Founder & Treasurer
-- **Work:** Wegmans Food Markets, cash register operator & self-checkout overseer, managed 12+ stations
+- **Work:** Cornell BeyngLab/StudioLab undergrad research assistant (Jun 2026–present, backend + AI search for a 40,000+ page archive) · Math Lab Online co-founder (501(c)(3) math tutoring nonprofit, Feb 2023–Aug 2025) · Wegmans cashier & self-checkout overseer, 12+ stations (Nov 2023–present)
 - **Cornell orgs:** Kappa Theta Pi (President, Beta New Member Class) · Sigma Nu Gamma Theta (Treasurer)
-- **Projects:** Forage Nutrition (foragenutrition.vercel.app) + this portfolio
+- **Projects:** ForageAI (foragenutrition.vercel.app — Next.js/TypeScript/Supabase/Anthropic API) · MyTube (AWS video streaming: S3, MediaConvert, CloudFront, Cognito, EventBridge, RDS) · this portfolio
 - **Email:** mcgresock@gmail.com
 - **LinkedIn:** linkedin.com/in/matthew-gresock
 

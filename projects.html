@@ -42,8 +42,8 @@
         <div class="section-label">Projects</div>
         <h1>Things I've<br><span class="gradient-text">actually shipped.</span></h1>
         <p>
-          Two full projects, built solo from concept to production. One is a live AI web app.
-          The other is the site you're on right now.
+          Three full projects, built solo from concept to production — a cloud-hosted AI platform,
+          an AWS video streaming service, and the site you're on right now.
         </p>
         <div style="margin-top: 28px;">
           <a href="https://github.com/mgresock" target="_blank" rel="noopener" class="btn btn-outline">View my GitHub ↗</a>
@@ -53,6 +53,73 @@
       <!-- ===== PROJECTS LIST ===== -->
       <div class="projects-list">
 
+        <!-- ===== MYTUBE ===== -->
+        <div class="project-feature-card reveal">
+
+          <div class="project-feature-header">
+            <div class="project-feature-logo-play"></div>
+            <div class="project-feature-title-block">
+              <div class="project-feature-eyebrow">Full Stack · Cloud · AWS</div>
+              <div class="project-feature-name">MyTube</div>
+              <div class="project-feature-tagline">A video streaming platform with an event-driven AWS transcoding pipeline</div>
+            </div>
+          </div>
+
+          <div class="project-feature-body">
+
+            <div class="project-feature-desc">
+              <p>
+                MyTube is a full video-sharing platform — uploads, playback, search, channels,
+                comments, and reactions. The interesting part isn't the front end. It's what
+                happens after someone hits upload. A raw video file is useless until it's been
+                transcoded into multiple resolutions, stored durably, and served from an edge
+                network close to the viewer. That's the problem I actually wanted to solve.
+              </p>
+              <p>
+                The pipeline is event-driven. Uploads go directly to S3 using presigned URLs,
+                which keeps large files off my application servers entirely. That upload fires an
+                EventBridge event, which triggers MediaConvert to transcode the video into
+                multiple renditions. When the job completes, another event updates the database
+                and marks the video ready. Nothing polls, nothing blocks, and each stage can fail
+                and retry independently without taking the rest of the system down.
+              </p>
+              <p>
+                Delivery runs through CloudFront so playback starts fast regardless of where the
+                viewer is. Auth is handled by Cognito with JWT verification on every protected
+                route. Metadata, channels, comments, and reactions live in PostgreSQL on RDS,
+                with full-text search built directly into the database rather than bolted on as
+                a separate service. The whole front end is Next.js and TypeScript.
+              </p>
+            </div>
+
+            <div class="project-detail-grid">
+              <div class="project-detail-row">
+                <div class="project-detail-key">Role</div>
+                <div class="project-detail-val">Sole developer — architecture, backend, frontend, cloud infrastructure</div>
+              </div>
+              <div class="project-detail-row">
+                <div class="project-detail-key">Built</div>
+                <div class="project-detail-val">July 2026</div>
+              </div>
+              <div class="project-detail-row">
+                <div class="project-detail-key">Stack</div>
+                <div class="project-detail-val">Next.js · TypeScript · PostgreSQL (RDS)</div>
+              </div>
+              <div class="project-detail-row">
+                <div class="project-detail-key">AWS</div>
+                <div class="project-detail-val">S3 · MediaConvert · CloudFront · Cognito · EventBridge · RDS</div>
+              </div>
+              <div class="project-detail-row">
+                <div class="project-detail-key">Repo</div>
+                <div class="project-detail-val">
+                  <a href="https://github.com/mgresock" target="_blank" rel="noopener" style="color: var(--blue);">GitHub ↗</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
         <!-- ===== FORAGE ===== -->
         <div class="project-feature-card reveal">
 
@@ -61,9 +128,9 @@
               <img src="FORAGE_LOGO.png" alt="Forage Nutrition" />
             </div>
             <div class="project-feature-title-block">
-              <div class="project-feature-eyebrow">Full Stack · AI · Web App</div>
-              <div class="project-feature-name">Forage Nutrition</div>
-              <div class="project-feature-tagline">An AI-powered nutrition tracker with conversational logging and dietary goal-setting</div>
+              <div class="project-feature-eyebrow">Full Stack · AI · Cloud-Hosted</div>
+              <div class="project-feature-name">ForageAI</div>
+              <div class="project-feature-tagline">A multi-user AI nutrition platform with conversational logging and dietary goal-setting</div>
             </div>
             <div class="project-feature-actions">
               <a href="https://foragenutrition.vercel.app" target="_blank" rel="noopener" class="btn btn-primary">View Live ↗</a>
@@ -80,19 +147,19 @@
                 fast, specific, and smart about what you're actually putting in your body.
               </p>
               <p>
-                I built the entire thing solo. The backend is powered by Python — handling API routing,
-                LLM integration, and all server-side logic. The app sends natural-language food entries
-                to OpenAI's API, extracts macros and micronutrients, and maps them against a user's
-                daily targets. All meal data is stored in a Supabase backend using a SQL schema
-                designed to support flexible per-meal logging, running daily totals, and user-specific
-                nutritional goals.
+                I built the entire thing solo. The app sends natural-language food entries to
+                Anthropic's API, extracts macros and micronutrients, and maps them against a
+                user's daily targets. Meal data lives in Supabase on PostgreSQL, with schemas
+                and REST API workflows designed to support flexible per-meal logging, running
+                daily totals, user activity, and progress tracking across multiple users.
               </p>
               <p>
-                The front end is built in TypeScript. I focused heavily on the user interface —
-                making the experience feel fast and uncluttered rather than clinical. The chat input
-                handles everything from a single food item to a full meal description, and the
-                dashboard surfaces your day's progress at a glance without requiring you to dig.
-                Deployed on Vercel with continuous delivery from GitHub.
+                The front end is Next.js and TypeScript. I focused heavily on the interface —
+                making the experience feel fast and uncluttered rather than clinical. The chat
+                input handles everything from a single food item to a full meal description, and
+                the React dashboards surface your day's progress and trends at a glance without
+                requiring you to dig. Containerized with Capacitor for reproducible deployment
+                and shipped on Vercel with continuous delivery from GitHub.
               </p>
             </div>
 
@@ -113,7 +180,7 @@
               </div>
               <div class="project-detail-row">
                 <div class="project-detail-key">Stack</div>
-                <div class="project-detail-val">TypeScript · Python · SQL · Supabase · OpenAI API · Vercel</div>
+                <div class="project-detail-val">Next.js · TypeScript · Supabase · PostgreSQL · Anthropic API · Vercel</div>
               </div>
               <div class="project-detail-row">
                 <div class="project-detail-key">Repo</div>
@@ -218,7 +285,7 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-left">
-          <strong>Matt Gresock</strong> &nbsp;·&nbsp; Cornell ORIE &amp; CS '29 &nbsp;·&nbsp; mcgresock@gmail.com
+          <strong>Matt Gresock</strong> &nbsp;·&nbsp; Cornell ORIE &amp; CS '28 &nbsp;·&nbsp; mcgresock@gmail.com
         </div>
         <div class="footer-links">
           <a href="https://www.linkedin.com/in/matthew-gresock" target="_blank" rel="noopener">LinkedIn</a>
