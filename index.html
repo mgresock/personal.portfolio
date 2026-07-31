@@ -93,8 +93,8 @@
       <!-- ===== BENTO GRID ===== -->
       <div class="bento-grid reveal">
 
-        <!-- Cols 1–2, row 1: Forage -->
-        <a href="https://foragenutrition.vercel.app" target="_blank" rel="noopener" class="bento-cell bento-forage-card" style="grid-column: 1 / 3; grid-row: 1;">
+        <!-- Cols 1–2, rows 1–2: ForageAI (featured) -->
+        <a href="https://foragenutrition.vercel.app" target="_blank" rel="noopener" class="bento-cell bento-forage-card bento-featured" style="grid-column: 1 / 3; grid-row: 1 / 3;">
           <div class="bento-forage-header">
             <div class="bento-forage-icon-sm">
               <img src="FORAGE_LOGO.png" alt="Forage" />
@@ -104,68 +104,55 @@
               <div class="bento-title" style="margin-bottom: 0;">ForageAI</div>
             </div>
           </div>
-          <div class="bento-sub">Cloud-hosted AI nutrition platform — conversational food logging, meal analysis, and progress tracking powered by the Anthropic API.</div>
+          <div class="bento-sub">Cloud-hosted, multi-user AI nutrition platform built end to end.</div>
+          <ul class="bento-feature-list">
+            <li>PostgreSQL schemas and REST API workflows for meal logging, nutrition analysis, and progress tracking</li>
+            <li>Anthropic API pipeline that parses natural-language meals into structured macro and micronutrient data</li>
+            <li>Responsive React dashboards and data visualizations, containerized for reproducible deployment</li>
+          </ul>
           <div class="bento-stack-row">
             <span class="bento-stack-pill">Next.js</span>
             <span class="bento-stack-pill">TypeScript</span>
             <span class="bento-stack-pill">Supabase</span>
+            <span class="bento-stack-pill">PostgreSQL</span>
             <span class="bento-stack-pill">Anthropic API</span>
+            <span class="bento-stack-pill">Vercel</span>
           </div>
         </a>
 
-        <!-- Cols 3–4, row 1: Cornell -->
-        <div class="bento-cell bento-cornell-card" style="grid-column: 3 / 5; grid-row: 1;">
-          <div class="bento-cornell-watermark" aria-hidden="true">ORIE</div>
-          <div class="bento-tag">Cornell Engineering · Class of '28</div>
-          <div class="bento-title">ORIE &amp; CS</div>
-          <div class="bento-sub">Operations Research &amp; Information Engineering · Double Major in Computer Science</div>
-        </div>
-
-        <!-- Cols 1–2, row 2: MyTube -->
-        <div class="bento-cell bento-mytube-card" style="grid-column: 1 / 3; grid-row: 2;">
+        <!-- Cols 3–4, row 1: MyTube -->
+        <div class="bento-cell bento-mytube-card" style="grid-column: 3 / 5; grid-row: 1;">
           <div class="bento-mytube-header">
             <div class="bento-mytube-icon"></div>
             <div class="bento-forage-header-text">
-              <div class="bento-tag" style="margin-bottom: 4px;">Full-Stack Project</div>
+              <div class="bento-tag" style="margin-bottom: 4px;">Full-Stack · Cloud</div>
               <div class="bento-title" style="margin-bottom: 0;">MyTube</div>
             </div>
           </div>
-          <div class="bento-sub">AWS-powered video streaming platform — event-driven transcoding with S3, MediaConvert, CloudFront, and Cognito.</div>
+          <div class="bento-sub">Event-driven AWS video pipeline — S3 presigned uploads, MediaConvert transcoding, CloudFront delivery, and Cognito JWT auth.</div>
           <div class="bento-stack-row">
-            <span class="bento-stack-pill">Next.js</span>
-            <span class="bento-stack-pill">TypeScript</span>
-            <span class="bento-stack-pill">AWS</span>
-            <span class="bento-stack-pill">PostgreSQL</span>
+            <span class="bento-stack-pill">S3</span>
+            <span class="bento-stack-pill">MediaConvert</span>
+            <span class="bento-stack-pill">CloudFront</span>
+            <span class="bento-stack-pill">EventBridge</span>
+            <span class="bento-stack-pill">RDS</span>
           </div>
         </div>
 
-        <!-- Col 3, row 2: 6th in NY State OO -->
-        <div class="bento-cell bento-stat-card" style="grid-column: 3; grid-row: 2;">
-          <div class="bento-stat-glow"></div>
-          <div class="bento-number">6th</div>
-          <div class="bento-label">New York State · Original Oratory · NYSFL 2025</div>
-        </div>
-
-        <!-- Col 4, row 2: Eagle Scout -->
-        <div class="bento-cell bento-stat-card" style="grid-column: 4; grid-row: 2;">
-          <div class="bento-stat-glow"></div>
-          <div class="bento-number">50</div>
-          <div class="bento-label">Scouts led at the 2023 National Jamboree · Eagle Scout</div>
-        </div>
-
-        <!-- Cols 1–2, row 3: NCFL Nationals -->
-        <div class="bento-cell bento-stat-card" style="grid-column: 1 / 3; grid-row: 3;">
-          <div class="bento-stat-glow"></div>
-          <div class="bento-number">3×</div>
-          <div class="bento-label">NCFL Nationals qualifier · Speech &amp; Debate</div>
-        </div>
-
-        <!-- Cols 3–4, row 3: Cornell Research -->
-        <div class="bento-cell bento-research-card" style="grid-column: 3 / 5; grid-row: 3;">
+        <!-- Col 3, row 2: Cornell Research -->
+        <div class="bento-cell bento-research-card" style="grid-column: 3; grid-row: 2;">
           <div class="bento-research-watermark" aria-hidden="true">AI</div>
-          <div class="bento-tag">Cornell Engineering · BeyngLab</div>
+          <div class="bento-tag">Cornell · BeyngLab</div>
           <div class="bento-title">Research</div>
-          <div class="bento-sub">AI-assisted search &amp; retrieval for a 40,000+ page digital archive</div>
+          <div class="bento-sub">Backend owner for a 40,000+ page digital archive — AI-assisted search and content retrieval</div>
+        </div>
+
+        <!-- Col 4, row 2: Cornell -->
+        <div class="bento-cell bento-cornell-card" style="grid-column: 4; grid-row: 2;">
+          <div class="bento-cornell-watermark" aria-hidden="true">ORIE</div>
+          <div class="bento-tag">Cornell Engineering · '28</div>
+          <div class="bento-title">ORIE &amp; CS</div>
+          <div class="bento-sub">Data Structures &amp; Algorithms · Object-Oriented Programming · Probability &amp; Statistics · Linear Algebra</div>
         </div>
 
       </div>

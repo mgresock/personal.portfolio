@@ -85,12 +85,19 @@ Matthew-Gresock-Resume.pdf — Needs to be added to repo separately
 - Must contain duplicated items (×2) for seamless loop
 
 ### Bento Grid (inside container)
-- 4-column grid: `1fr 1fr 1fr 1fr`, rows: `240px 240px 240px`
-- 7 cells with explicit `grid-column` / `grid-row` inline styles
-- Row 1: ForageAI (cols 1–2) | Cornell ORIE (cols 3–4)
-- Row 2: MyTube (cols 1–2) | 6th NYSFL (col 3) | 50 Jamboree (col 4)
-- Row 3: 3× NCFL (cols 1–2) | Cornell Research/BeyngLab (cols 3–4)
+- 4-column grid: `1fr 1fr 1fr 1fr`, rows: `260px 260px`
+- **Technical content only** — the homepage grid is aimed at SWE recruiting.
+  Speech/Scouts/debate achievement stat cards were REMOVED on purpose; do not
+  re-add them here (that background still lives on experience.html + about.html).
+- 4 cells with explicit `grid-column` / `grid-row` inline styles:
+  - ForageAI — cols 1–2, **rows 1–2 (tall featured card)**, `.bento-featured`, links to live site
+  - MyTube — cols 3–4, row 1
+  - Cornell Research/BeyngLab — col 3, row 2
+  - Cornell ORIE & CS — col 4, row 2
+- `.bento-featured` uses `justify-content: space-between` (no spacer div) so the
+  header / bullets / stack pills distribute across the tall card
 - MyTube + Research cards use pure-CSS marks (`.bento-mytube-icon` play triangle, `.bento-research-watermark`) — no image assets
+- `.bento-stat-card` / `.bento-number` / `.bento-label` CSS still exists but is currently unused
 
 ---
 
