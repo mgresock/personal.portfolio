@@ -1607,6 +1607,15 @@ body::before {
 .contact-icon {
   font-size: 1.5rem;
   line-height: 1;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-icon svg {
+  width: 28px;
+  height: 28px;
+  display: block;
 }
 
 .contact-method-label {
